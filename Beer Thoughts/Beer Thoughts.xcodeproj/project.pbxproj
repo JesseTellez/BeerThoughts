@@ -13,6 +13,16 @@
 		1860C5D51D0BBA58007ED07C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1860C5D41D0BBA58007ED07C /* Assets.xcassets */; };
 		1860C5D81D0BBA58007ED07C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1860C5D61D0BBA58007ED07C /* LaunchScreen.storyboard */; };
 		1860C5E31D0BC247007ED07C /* BeerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1860C5E21D0BC247007ED07C /* BeerCell.swift */; };
+		1860C5E51D0BC660007ED07C /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1860C5E41D0BC660007ED07C /* Alamofire.framework */; };
+		1860C5E71D0BC663007ED07C /* expanding_collection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1860C5E61D0BC663007ED07C /* expanding_collection.framework */; };
+		1860C5E91D0BCB1B007ED07C /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1860C5E81D0BCB1B007ED07C /* Beer.swift */; };
+		1860C5EB1D0BCBAD007ED07C /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1860C5EA1D0BCBAD007ED07C /* Story.swift */; };
+		1860C5EE1D0BCD28007ED07C /* BeersCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1860C5ED1D0BCD28007ED07C /* BeersCollectionVC.swift */; };
+		1860C5F11D0BCE4D007ED07C /* StoryBoardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1860C5F01D0BCE4D007ED07C /* StoryBoardHelper.swift */; };
+		1860C5F31D0BCF31007ED07C /* StoriesTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1860C5F21D0BCF31007ED07C /* StoriesTableVC.swift */; };
+		1860C5F51D0BD05A007ED07C /* ConfigurationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1860C5F41D0BD05A007ED07C /* ConfigurationHelper.swift */; };
+		1860C5F71D0BD5DD007ED07C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1860C5F61D0BD5DD007ED07C /* Constants.swift */; };
+		4C026EA6F94BA953CF55EFD5 /* Pods_Beer_Thoughts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E186076CC3EBB09A7221693 /* Pods_Beer_Thoughts.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +34,18 @@
 		1860C5D71D0BBA58007ED07C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1860C5D91D0BBA58007ED07C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1860C5E21D0BC247007ED07C /* BeerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeerCell.swift; sourceTree = "<group>"; };
+		1860C5E41D0BC660007ED07C /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../../Library/Developer/Xcode/DerivedData/Beer_Thoughts-hkzhekzgbjwrqxgxaqowmbopbxdr/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
+		1860C5E61D0BC663007ED07C /* expanding_collection.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = expanding_collection.framework; path = "../../../Library/Developer/Xcode/DerivedData/Beer_Thoughts-hkzhekzgbjwrqxgxaqowmbopbxdr/Build/Products/Debug-iphonesimulator/expanding-collection/expanding_collection.framework"; sourceTree = "<group>"; };
+		1860C5E81D0BCB1B007ED07C /* Beer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
+		1860C5EA1D0BCBAD007ED07C /* Story.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
+		1860C5ED1D0BCD28007ED07C /* BeersCollectionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeersCollectionVC.swift; sourceTree = "<group>"; };
+		1860C5F01D0BCE4D007ED07C /* StoryBoardHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryBoardHelper.swift; sourceTree = "<group>"; };
+		1860C5F21D0BCF31007ED07C /* StoriesTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoriesTableVC.swift; sourceTree = "<group>"; };
+		1860C5F41D0BD05A007ED07C /* ConfigurationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationHelper.swift; sourceTree = "<group>"; };
+		1860C5F61D0BD5DD007ED07C /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		2E186076CC3EBB09A7221693 /* Pods_Beer_Thoughts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Beer_Thoughts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		47A65A73D2F9338E01BC1E96 /* Pods-Beer Thoughts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beer Thoughts.release.xcconfig"; path = "Pods/Target Support Files/Pods-Beer Thoughts/Pods-Beer Thoughts.release.xcconfig"; sourceTree = "<group>"; };
+		A74999E807E3885A74BF82D6 /* Pods-Beer Thoughts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beer Thoughts.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Beer Thoughts/Pods-Beer Thoughts.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +53,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1860C5E71D0BC663007ED07C /* expanding_collection.framework in Frameworks */,
+				1860C5E51D0BC660007ED07C /* Alamofire.framework in Frameworks */,
+				4C026EA6F94BA953CF55EFD5 /* Pods_Beer_Thoughts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,9 +65,10 @@
 		1860C5C11D0BBA58007ED07C = {
 			isa = PBXGroup;
 			children = (
-				1860C5E01D0BC1E5007ED07C /* New Group */,
 				1860C5CB1D0BBA58007ED07C /* Products */,
 				1860C5CC1D0BBA58007ED07C /* Beer Thoughts */,
+				77634E3DB50525B33E9B7B4F /* Pods */,
+				9CE22D282BDBA9CB95660A3D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,6 +83,8 @@
 		1860C5CC1D0BBA58007ED07C /* Beer Thoughts */ = {
 			isa = PBXGroup;
 			children = (
+				1860C5EF1D0BCE38007ED07C /* Resources */,
+				1860C5EC1D0BCD09007ED07C /* Controller */,
 				1860C5E11D0BC1F3007ED07C /* Views */,
 				1860C5DF1D0BBBF5007ED07C /* Model */,
 				1860C5CD1D0BBA58007ED07C /* AppDelegate.swift */,
@@ -72,15 +100,10 @@
 		1860C5DF1D0BBBF5007ED07C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1860C5E81D0BCB1B007ED07C /* Beer.swift */,
+				1860C5EA1D0BCBAD007ED07C /* Story.swift */,
 			);
 			name = Model;
-			sourceTree = "<group>";
-		};
-		1860C5E01D0BC1E5007ED07C /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "New Group";
 			sourceTree = "<group>";
 		};
 		1860C5E11D0BC1F3007ED07C /* Views */ = {
@@ -91,6 +114,44 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
+		1860C5EC1D0BCD09007ED07C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1860C5ED1D0BCD28007ED07C /* BeersCollectionVC.swift */,
+				1860C5F21D0BCF31007ED07C /* StoriesTableVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		1860C5EF1D0BCE38007ED07C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1860C5F01D0BCE4D007ED07C /* StoryBoardHelper.swift */,
+				1860C5F41D0BD05A007ED07C /* ConfigurationHelper.swift */,
+				1860C5F61D0BD5DD007ED07C /* Constants.swift */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		77634E3DB50525B33E9B7B4F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A74999E807E3885A74BF82D6 /* Pods-Beer Thoughts.debug.xcconfig */,
+				47A65A73D2F9338E01BC1E96 /* Pods-Beer Thoughts.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9CE22D282BDBA9CB95660A3D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1860C5E61D0BC663007ED07C /* expanding_collection.framework */,
+				1860C5E41D0BC660007ED07C /* Alamofire.framework */,
+				2E186076CC3EBB09A7221693 /* Pods_Beer_Thoughts.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -98,9 +159,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1860C5DC1D0BBA58007ED07C /* Build configuration list for PBXNativeTarget "Beer Thoughts" */;
 			buildPhases = (
+				7EF682151DA9A754CD43C764 /* [CP] Check Pods Manifest.lock */,
 				1860C5C61D0BBA58007ED07C /* Sources */,
 				1860C5C71D0BBA58007ED07C /* Frameworks */,
 				1860C5C81D0BBA58007ED07C /* Resources */,
+				FFA7120287F5AB83D783C163 /* [CP] Embed Pods Frameworks */,
+				352FA484F7C662DE955CB40D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -157,14 +221,69 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		352FA484F7C662DE955CB40D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Beer Thoughts/Pods-Beer Thoughts-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7EF682151DA9A754CD43C764 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FFA7120287F5AB83D783C163 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Beer Thoughts/Pods-Beer Thoughts-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1860C5C61D0BBA58007ED07C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1860C5F51D0BD05A007ED07C /* ConfigurationHelper.swift in Sources */,
+				1860C5F11D0BCE4D007ED07C /* StoryBoardHelper.swift in Sources */,
+				1860C5F31D0BCF31007ED07C /* StoriesTableVC.swift in Sources */,
 				1860C5E31D0BC247007ED07C /* BeerCell.swift in Sources */,
 				1860C5D01D0BBA58007ED07C /* ViewController.swift in Sources */,
+				1860C5F71D0BD5DD007ED07C /* Constants.swift in Sources */,
+				1860C5EE1D0BCD28007ED07C /* BeersCollectionVC.swift in Sources */,
 				1860C5CE1D0BBA58007ED07C /* AppDelegate.swift in Sources */,
+				1860C5E91D0BCB1B007ED07C /* Beer.swift in Sources */,
+				1860C5EB1D0BCBAD007ED07C /* Story.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +396,7 @@
 		};
 		1860C5DD1D0BBA58007ED07C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A74999E807E3885A74BF82D6 /* Pods-Beer Thoughts.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Beer Thoughts/Info.plist";
@@ -288,6 +408,7 @@
 		};
 		1860C5DE1D0BBA58007ED07C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47A65A73D2F9338E01BC1E96 /* Pods-Beer Thoughts.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Beer Thoughts/Info.plist";
@@ -316,6 +437,7 @@
 				1860C5DE1D0BBA58007ED07C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

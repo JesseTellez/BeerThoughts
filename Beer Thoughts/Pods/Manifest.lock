@@ -1,0 +1,15 @@
+PODS:
+  - Alamofire (3.4.0)
+  - expanding-collection (0.0.6)
+
+DEPENDENCIES:
+  - Alamofire (~> 3.4)
+  - expanding-collection
+
+SPEC CHECKSUMS:
+  Alamofire: c19a627cefd6a95f840401c49ab1f124e07f54ee
+  expanding-collection: 3016d8013b8ad4599e616befb9242d995d56e5fa
+
+PODFILE CHECKSUM: 8f5ee1f4181dfaf13d4855f7bbc76526e9b91ad6
+
+COCOAPODS: 1.0.1
