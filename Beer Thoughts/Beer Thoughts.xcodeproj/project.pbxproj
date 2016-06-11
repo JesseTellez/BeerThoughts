@@ -22,6 +22,7 @@
 		1860C5F31D0BCF31007ED07C /* StoriesTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1860C5F21D0BCF31007ED07C /* StoriesTableVC.swift */; };
 		1860C5F51D0BD05A007ED07C /* ConfigurationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1860C5F41D0BD05A007ED07C /* ConfigurationHelper.swift */; };
 		1860C5F71D0BD5DD007ED07C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1860C5F61D0BD5DD007ED07C /* Constants.swift */; };
+		45B168B01D0BDF86007A5956 /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B168AF1D0BDF86007A5956 /* Random.swift */; };
 		4C026EA6F94BA953CF55EFD5 /* Pods_Beer_Thoughts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E186076CC3EBB09A7221693 /* Pods_Beer_Thoughts.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +45,7 @@
 		1860C5F41D0BD05A007ED07C /* ConfigurationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationHelper.swift; sourceTree = "<group>"; };
 		1860C5F61D0BD5DD007ED07C /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2E186076CC3EBB09A7221693 /* Pods_Beer_Thoughts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Beer_Thoughts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		45B168AF1D0BDF86007A5956 /* Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Random.swift; sourceTree = "<group>"; };
 		47A65A73D2F9338E01BC1E96 /* Pods-Beer Thoughts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beer Thoughts.release.xcconfig"; path = "Pods/Target Support Files/Pods-Beer Thoughts/Pods-Beer Thoughts.release.xcconfig"; sourceTree = "<group>"; };
 		A74999E807E3885A74BF82D6 /* Pods-Beer Thoughts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beer Thoughts.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Beer Thoughts/Pods-Beer Thoughts.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,6 +95,7 @@
 				1860C5D41D0BBA58007ED07C /* Assets.xcassets */,
 				1860C5D61D0BBA58007ED07C /* LaunchScreen.storyboard */,
 				1860C5D91D0BBA58007ED07C /* Info.plist */,
+				45B168AF1D0BDF86007A5956 /* Random.swift */,
 			);
 			path = "Beer Thoughts";
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 				1860C5CE1D0BBA58007ED07C /* AppDelegate.swift in Sources */,
 				1860C5E91D0BCB1B007ED07C /* Beer.swift in Sources */,
 				1860C5EB1D0BCBAD007ED07C /* Story.swift in Sources */,
+				45B168B01D0BDF86007A5956 /* Random.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
