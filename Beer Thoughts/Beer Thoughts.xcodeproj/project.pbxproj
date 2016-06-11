@@ -12,6 +12,7 @@
 		1860C5D31D0BBA58007ED07C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1860C5D11D0BBA58007ED07C /* Main.storyboard */; };
 		1860C5D51D0BBA58007ED07C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1860C5D41D0BBA58007ED07C /* Assets.xcassets */; };
 		1860C5D81D0BBA58007ED07C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1860C5D61D0BBA58007ED07C /* LaunchScreen.storyboard */; };
+		1860C5E31D0BC247007ED07C /* BeerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1860C5E21D0BC247007ED07C /* BeerCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		1860C5D41D0BBA58007ED07C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1860C5D71D0BBA58007ED07C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1860C5D91D0BBA58007ED07C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1860C5E21D0BC247007ED07C /* BeerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeerCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,8 +40,9 @@
 		1860C5C11D0BBA58007ED07C = {
 			isa = PBXGroup;
 			children = (
-				1860C5CC1D0BBA58007ED07C /* Beer Thoughts */,
+				1860C5E01D0BC1E5007ED07C /* New Group */,
 				1860C5CB1D0BBA58007ED07C /* Products */,
+				1860C5CC1D0BBA58007ED07C /* Beer Thoughts */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +57,8 @@
 		1860C5CC1D0BBA58007ED07C /* Beer Thoughts */ = {
 			isa = PBXGroup;
 			children = (
+				1860C5E11D0BC1F3007ED07C /* Views */,
+				1860C5DF1D0BBBF5007ED07C /* Model */,
 				1860C5CD1D0BBA58007ED07C /* AppDelegate.swift */,
 				1860C5CF1D0BBA58007ED07C /* ViewController.swift */,
 				1860C5D11D0BBA58007ED07C /* Main.storyboard */,
@@ -62,6 +67,28 @@
 				1860C5D91D0BBA58007ED07C /* Info.plist */,
 			);
 			path = "Beer Thoughts";
+			sourceTree = "<group>";
+		};
+		1860C5DF1D0BBBF5007ED07C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		1860C5E01D0BC1E5007ED07C /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group";
+			sourceTree = "<group>";
+		};
+		1860C5E11D0BC1F3007ED07C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1860C5E21D0BC247007ED07C /* BeerCell.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +162,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1860C5E31D0BC247007ED07C /* BeerCell.swift in Sources */,
 				1860C5D01D0BBA58007ED07C /* ViewController.swift in Sources */,
 				1860C5CE1D0BBA58007ED07C /* AppDelegate.swift in Sources */,
 			);
