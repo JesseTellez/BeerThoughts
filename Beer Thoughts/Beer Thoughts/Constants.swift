@@ -8,7 +8,7 @@
 
 import Foundation
 
-let URL_BASE = "http://apis.mondorobot.com/"
-let URL_BEERS = "beers/"
+let URL_BASE = "http://apis.mondorobot.com"
+let URL_BEERS = "/beers/"
 
 typealias DownloadComplete = () -> ()

@@ -14,25 +14,15 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>expanding-collection.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>397074EE0BD676828313D6C0CBFADE42</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>9815221B777AD23EED8A1A1FE6D5AB2A</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>A1E53CCF756EE39691A061DC45EC5DDB</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -4,5 +4,4 @@ use_frameworks!
 
 target 'Beer Thoughts' do
 pod 'Alamofire', '~>3.4'
-pod 'expanding-collection'
 end
