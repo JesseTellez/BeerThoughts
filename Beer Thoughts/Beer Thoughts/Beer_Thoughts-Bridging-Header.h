@@ -1,8 +1,8 @@
 //
-//  Beer-Thoughts-Bridging-Header.h
+//  Beer_Thoughts-Bridging-Header.h
 //  Beer Thoughts
 //
-//  Created by Jesse Tellez on 6/14/16.
+//  Created by Jesse Tellez on 6/16/16.
 //  Copyright © 2016 HomeBrew. All rights reserved.
 //
 

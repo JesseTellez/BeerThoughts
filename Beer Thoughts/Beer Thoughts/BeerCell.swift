@@ -10,63 +10,59 @@ import Foundation
 import UIKit
 import Alamofire
 
-class BeerCell: BasePageCollectionCell {
+class BeerCell: BasePageCollectionCell, SDWebImageManagerDelegate {
     
-    @IBOutlet weak var backgrondImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var alcPercentLabel: UILabel!
     @IBOutlet weak var beerDescription: UITextView!
     @IBOutlet weak var beerType: UILabel!
+    @IBOutlet weak var customImageView: CustomImageView!
     
-    var request: Request?
-    var beer: Beer!
-    
+    private var newSize = CGSize(width: 240, height: 249)
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        SDWebImageManager.sharedManager().delegate = self
         titleLabel.layer.shadowRadius = 2
         titleLabel.layer.shadowOffset = CGSize(width: 0, height: 3)
         titleLabel.layer.shadowOpacity = 0.2
         
     }
     
-    func configureCell(beer: Beer, img: UIImage?) {
+    func configureCell(beer: Beer) {
         
-        self.beer = beer
         titleLabel.text = beer.beerName
         alcPercentLabel.text = "\(beer.beerPerc)%"
         beerDescription.text = beer.beerDesc
         beerType.text = beer.beerType
         
-        //everytime we download an image from the server, we must store it in a cache
         if beer.beerImage != nil {
+                
+            let url = NSURL(string: beer.beerImage!)
             
-            if img != nil {
-                self.backgrondImageView.image = img
-            }
-            else {
+            SDWebImageManager.sharedManager().downloadImageWithURL(url, options: SDWebImageOptions.CacheMemoryOnly, progress: { [weak self] (recievedSize, expectedSize) in
                 
-               // SDWebImageManager.sharedManager().
-                //SDWebImageManager.sharedManager
+                self!.customImageView.progressIndicatorView.progress = CGFloat(recievedSize)/CGFloat(expectedSize)
                 
-                request = Alamofire.request(.GET, beer.beerImage!).validate(contentType: ["image/*"]).response(completionHandler: {
-                    req, res, data, err in
+                }, completed: { (image, error, cacheType, _, _) in
                     
-                    if err == nil {
-                        dispatch_async(dispatch_get_main_queue(), { 
+                    if error == nil {
+        
+                        dispatch_async(dispatch_get_main_queue(), { [weak self]
                             () -> Void in
-                              let imgData = UIImage(data: data!)!
-                            self.backgrondImageView.image = imgData
-                            BeersCollectionVC.imageCache.setObject(imgData, forKey: self.beer.beerImage!)
+                            self!.customImageView.image = image
+                            self!.customImageView.progressIndicatorView.reveal()
                         })
-                      
                     }
-                })
-            }
-        } else {
-            self.backgrondImageView.image = UIImage(named: "loading 2")
+            })
         }
+    }
+    
+    
+    func imageManager(imageManager: SDWebImageManager!, transformDownloadedImage image: UIImage!, withURL imageURL: NSURL!) -> UIImage! {
+        let newImage = UIImage.resizeImage(image)
+        return newImage
     }
 }
 

@@ -36,30 +36,7 @@
                     <view key="view" contentMode="scaleToFill" id="ky1-Mj-pad">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avery-brewing-logo" translatesAutoresizingMaskIntoConstraints="NO" id="nF6-Qa-B9f">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                            </imageView>
-                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZcX-vr-5A1">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="0u7-HX-U0J">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                </view>
-                                <blurEffect style="dark"/>
-                            </visualEffectView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="ZcX-vr-5A1" firstAttribute="leading" secondItem="ky1-Mj-pad" secondAttribute="leading" id="8RL-96-Zs1"/>
-                            <constraint firstItem="ZcX-vr-5A1" firstAttribute="top" secondItem="ky1-Mj-pad" secondAttribute="top" id="FzN-3T-YcW"/>
-                            <constraint firstAttribute="trailing" secondItem="ZcX-vr-5A1" secondAttribute="trailing" id="W6a-2Y-yK6"/>
-                            <constraint firstItem="liR-Hf-Ilw" firstAttribute="top" secondItem="nF6-Qa-B9f" secondAttribute="bottom" id="abV-nB-Pdc"/>
-                            <constraint firstItem="liR-Hf-Ilw" firstAttribute="top" secondItem="ZcX-vr-5A1" secondAttribute="bottom" id="bRp-vh-3GC"/>
-                            <constraint firstAttribute="trailing" secondItem="nF6-Qa-B9f" secondAttribute="trailing" id="fCt-si-2KO"/>
-                            <constraint firstItem="nF6-Qa-B9f" firstAttribute="top" secondItem="ky1-Mj-pad" secondAttribute="top" id="fe2-vv-Qj6"/>
-                            <constraint firstItem="nF6-Qa-B9f" firstAttribute="leading" secondItem="ky1-Mj-pad" secondAttribute="leading" id="m41-ag-Y0n"/>
-                        </constraints>
+                        <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="2Rh-zY-nQv">
                         <barButtonItem key="leftBarButtonItem" systemItem="search" id="yjm-2j-H1J"/>
@@ -73,10 +50,10 @@
             </objects>
             <point key="canvasLocation" x="1592" y="339"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Stories TableVC-->
         <scene sceneID="FB0-vN-wAa">
             <objects>
-                <tableViewController id="cE1-4F-qUW" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="StoriesTableVC" id="cE1-4F-qUW" customClass="StoriesTableVC" customModule="Beer_Thoughts" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="110" sectionHeaderHeight="28" sectionFooterHeight="28" id="Oxq-9V-w3F">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -165,6 +142,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="IJN-eJ-a6Q">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.83137254900000002" green="0.12125296381287481" blue="0.087879486824321257" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

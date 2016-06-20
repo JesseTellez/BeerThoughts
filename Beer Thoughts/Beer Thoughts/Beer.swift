@@ -30,7 +30,7 @@ class Beer {
     
     var beerDesc: String {
         if _beerDescription == nil {
-            _beerDescription = ""
+            _beerDescription = "There is no description yet!"
         }
         return _beerDescription
     }
@@ -56,6 +56,60 @@ class Beer {
     init(id: String) {
         self._beerId = id
         _beerULR = "\(URL_BASE)\(URL_BEERS)\(id)"
+    }
+    
+    init(withDictionary dict: NSDictionary) {
+        
+        if let id = dict["id"] as? String {
+            _beerId = id
+        }
+        
+        if let name = dict["name"] as? String {
+            _beerName = name
+        }
+        
+        if let description = dict["description"] as? String {
+            _beerDescription = description
+        }
+        
+        if let style = dict["style"] as? String {
+            _beerType = style
+        }
+        
+        if let abv = dict["abv"] as? String  {
+            _beerPercentage = abv
+        }
+        
+        if let bottleImage = dict["bottle_image"] as? Dictionary<String, AnyObject>
+        {
+            if let image = bottleImage["original"] as? String {
+                _beerImageUrl = image
+            }
+        }
+    }
+    
+    init(withName: String, percentage: String, type: String, imageUrl: String) {
+        _beerName = withName
+        _beerPercentage = percentage
+        _beerType = type
+        _beerImageUrl = imageUrl
+        _beerDescription = "There is not description yet!"
+    }
+    
+    class func downloadAllBeerData (completed: DownloadComplete) -> NSArray {
+         var beerArray: NSArray = NSArray()
+        
+        Alamofire.request(.GET, "\(URL_BASE)\(URL_BEERS)", parameters: nil).responseJSON(options: NSJSONReadingOptions.AllowFragments) { response in
+            
+            let result = response.result
+            
+            if let dict = result.value as? Dictionary<String, AnyObject> {
+                beerArray = dict["beers"] as! NSArray
+                print("THIS IS THE APP ARRAY: \(beerArray)")
+            }
+            completed()
+        }
+        return beerArray
     }
     
     func downloadBeerData (completed: DownloadComplete) {
@@ -104,41 +158,6 @@ class Beer {
             }
           completed()
         }.resume()
-        
-        
-//        Alamofire.request(.GET, url).responseJSON { response in
-//            print(response.result)
-//        }
-        
-//        Alamofire.request(.GET, url).responseJSON { response in
-//            
-//            let result = response.result
-//            
-//            if let dict = result.value as? Dictionary<String, AnyObject> {
-//                
-//                if let name = dict["name"] as? String {
-//                    self._beerName = name
-//                }
-//                if let description = dict["description"] as? String {
-//                    self._beerDescription = description
-//                }
-//                if let style = dict["style"] as? String {
-//                    self._beerType = style
-//                }
-//                if let abv = dict["abv"] as? Float {
-//                    self._beerPercentage = abv
-//                }
-//                if let image = dict["bottle_image"] as? Dictionary<String, AnyObject> {
-//                    if let imageurl = image["original"] as? String {
-//                        self._beerImageUrl = imageurl
-//                    }
-//                }
-//                
-//            }
-//            completed()
-//        }
-//        
-//    
     }
     
     

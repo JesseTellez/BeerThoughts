@@ -74,7 +74,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V8G-0i-rdB" userLabel="Front View">
                         <rect key="frame" x="0.0" y="0.0" width="256" height="335"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="t35-9O-LPi">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="t35-9O-LPi" customClass="CustomImageView" customModule="Beer_Thoughts" customModuleProvider="target">
                                 <rect key="frame" x="8" y="48" width="240" height="249"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
@@ -132,9 +132,9 @@
                 <outlet property="alcPercentLabel" destination="ze7-P1-Elr" id="bw2-9Y-CLl"/>
                 <outlet property="backConstraintY" destination="b8h-7c-pTB" id="CqG-WE-XRR"/>
                 <outlet property="backContainerView" destination="nYh-vM-yTb" id="QE0-Lu-KNv"/>
-                <outlet property="backgrondImageView" destination="t35-9O-LPi" id="9kT-pD-bPC"/>
                 <outlet property="beerDescription" destination="tLv-ut-Pye" id="ROM-ny-stN"/>
                 <outlet property="beerType" destination="vJI-9E-ubX" id="Q7d-ZM-HJF"/>
+                <outlet property="customImageView" destination="t35-9O-LPi" id="TXC-Ut-udA"/>
                 <outlet property="frontConstraintY" destination="D0r-hm-xZ2" id="7vo-PR-hNn"/>
                 <outlet property="frontContainerView" destination="V8G-0i-rdB" id="21O-ak-qsg"/>
                 <outlet property="titleLabel" destination="0UR-Kc-W6C" id="3K0-zB-A4I"/>

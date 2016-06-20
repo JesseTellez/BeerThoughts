@@ -11,4 +11,7 @@ import Foundation
 let URL_BASE = "http://apis.mondorobot.com"
 let URL_BEERS = "/beers/"
 
+let kMaxImageWidth: CGFloat = 240.0
+let kMaxImageHeight: CGFloat = 249.0
+
 typealias DownloadComplete = () -> ()
