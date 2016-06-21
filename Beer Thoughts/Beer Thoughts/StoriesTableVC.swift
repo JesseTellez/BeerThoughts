@@ -12,17 +12,25 @@ import UIKit
 class StoriesTableVC: ExpandingTableViewController {
     
     private var scrollOffsetY: CGFloat = 0
-    var beer: Beer!
+    var beer: String! = ""
+    var stories: [Story]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //configureNavbar()
+        if let name = self.beer where name != "" {
+            print("My Beer is: \(self.beer)")
+        }
         
-        
+        configureNavbar()
     }
-    
 }
 
+extension StoriesTableVC {
+    func configureNavbar() {
+        navigationItem.leftBarButtonItem?.image = navigationItem.leftBarButtonItem?.image!.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal)
+        navigationItem.rightBarButtonItem?.image = navigationItem.rightBarButtonItem?.image!.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal)
+    }
+}
 
 extension StoriesTableVC {
     
@@ -37,22 +45,27 @@ extension StoriesTableVC {
     }
 }
 
+extension StoriesTableVC {
+    
+    @IBAction func cancelButtonPressed(sender: AnyObject) {
+        
+        let viewControllers: [BeersCollectionVC?] = navigationController?.viewControllers.map { $0 as? BeersCollectionVC} ?? []
+        
+        for viewController in viewControllers {
+            if let rightButton = viewController?.navigationItem.rightBarButtonItem as? AnimationBarButton {
+                rightButton.animationSelected(false)
+            }
+        }
+        popTransitionAnimation()
+    }
+    
+}
+
 
 
 extension StoriesTableVC {
     
     override func scrollViewDidScroll(scrollView: UIScrollView) {
-        //    if scrollView.contentOffset.y < -25 {
-        //      // buttonAnimation
-        //      let viewControllers: [DemoViewController?] = navigationController?.viewControllers.map { $0 as? DemoViewController } ?? []
-        //
-        //      for viewController in viewControllers {
-        //        if let rightButton = viewController?.navigationItem.rightBarButtonItem as? AnimatingBarButton {
-        //          rightButton.animationSelected(false)
-        //        }
-        //      }
-        //      popTransitionAnimation()
-        //    }
         
         scrollOffsetY = scrollView.contentOffset.y
     }

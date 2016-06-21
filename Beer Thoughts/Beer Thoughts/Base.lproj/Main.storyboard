@@ -6,25 +6,6 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--TestVC-->
-        <scene sceneID="Jvy-pX-tr1">
-            <objects>
-                <viewController id="jlo-pn-DBp" customClass="TestVC" customModule="Beer_Thoughts" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="B2b-Ml-RPB"/>
-                        <viewControllerLayoutGuide type="bottom" id="Rqi-F6-Bik"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Mbv-Kh-PYF">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.40000000000000002" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="wGn-Lx-BOR"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="O0W-EL-ohl" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1672" y="-319"/>
-        </scene>
         <!--Beers CollectionVC-->
         <scene sceneID="cnr-dr-mh9">
             <objects>
@@ -39,8 +20,8 @@
                         <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="2Rh-zY-nQv">
-                        <barButtonItem key="leftBarButtonItem" systemItem="search" id="yjm-2j-H1J"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="f8C-Ax-yyv"/>
+                        <barButtonItem key="leftBarButtonItem" image="ic_search" id="yjm-2j-H1J"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="f8C-Ax-yyv" customClass="AnimationBarButton" customModule="Beer_Thoughts" customModuleProvider="target"/>
                     </navigationItem>
                     <connections>
                         <segue destination="cE1-4F-qUW" kind="show" id="R4B-Cx-Ymu"/>
@@ -50,7 +31,7 @@
             </objects>
             <point key="canvasLocation" x="1592" y="339"/>
         </scene>
-        <!--Stories TableVC-->
+        <!--Stories-->
         <scene sceneID="FB0-vN-wAa">
             <objects>
                 <tableViewController storyboardIdentifier="StoriesTableVC" id="cE1-4F-qUW" customClass="StoriesTableVC" customModule="Beer_Thoughts" customModuleProvider="target" sceneMemberID="viewController">
@@ -129,6 +110,16 @@
                             <outlet property="delegate" destination="cE1-4F-qUW" id="4xf-pO-7r2"/>
                         </connections>
                     </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Stories" id="p8u-1F-DMA">
+                        <barButtonItem key="leftBarButtonItem" image="ic_search" id="iqT-oL-fK4"/>
+                        <barButtonItem key="rightBarButtonItem" image="ic_cancel" id="aFl-82-yum">
+                            <connections>
+                                <action selector="cancelButtonPressed:" destination="cE1-4F-qUW" id="bD3-jv-ZPu"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hrZ-Sk-HhD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -142,7 +133,6 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="IJN-eJ-a6Q">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.83137254900000002" green="0.12125296381287481" blue="0.087879486824321257" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -156,5 +146,7 @@
     </scenes>
     <resources>
         <image name="avery-brewing-logo" width="1088" height="1199"/>
+        <image name="ic_cancel" width="24" height="24"/>
+        <image name="ic_search" width="24" height="24"/>
     </resources>
 </document>

@@ -10,6 +10,8 @@
 		1814EED41D12E141009AE464 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1814EED31D12E141009AE464 /* CustomImageView.swift */; };
 		1814EF311D187AFC009AE464 /* UIImageView+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1814EF301D187AFC009AE464 /* UIImageView+Resize.swift */; };
 		1814EF331D187EAD009AE464 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1814EF321D187EAD009AE464 /* DataService.swift */; };
+		1814EF361D188D4C009AE464 /* AnimationBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1814EF351D188D4C009AE464 /* AnimationBarButton.swift */; };
+		1814EF391D188E3E009AE464 /* Rotatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1814EF381D188E3E009AE464 /* Rotatable.swift */; };
 		1860C5CE1D0BBA58007ED07C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1860C5CD1D0BBA58007ED07C /* AppDelegate.swift */; };
 		1860C5D31D0BBA58007ED07C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1860C5D11D0BBA58007ED07C /* Main.storyboard */; };
 		1860C5D51D0BBA58007ED07C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1860C5D41D0BBA58007ED07C /* Assets.xcassets */; };
@@ -22,7 +24,6 @@
 		1860C5F11D0BCE4D007ED07C /* StoryBoardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1860C5F01D0BCE4D007ED07C /* StoryBoardHelper.swift */; };
 		1860C5F31D0BCF31007ED07C /* StoriesTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1860C5F21D0BCF31007ED07C /* StoriesTableVC.swift */; };
 		1860C5F71D0BD5DD007ED07C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1860C5F61D0BD5DD007ED07C /* Constants.swift */; };
-		1860C5FD1D0BF912007ED07C /* TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1860C5FC1D0BF912007ED07C /* TestVC.swift */; };
 		1860C5FF1D0C04FC007ED07C /* BeerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1860C5FE1D0C04FC007ED07C /* BeerCell.xib */; };
 		1860C6191D0C0F6E007ED07C /* ExpandingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1860C6021D0C0F6E007ED07C /* ExpandingTableViewController.swift */; };
 		1860C61A1D0C0F6E007ED07C /* BasePageCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1860C6061D0C0F6E007ED07C /* BasePageCollectionCell.swift */; };
@@ -61,6 +62,8 @@
 		1814EED31D12E141009AE464 /* CustomImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		1814EF301D187AFC009AE464 /* UIImageView+Resize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Resize.swift"; sourceTree = "<group>"; };
 		1814EF321D187EAD009AE464 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		1814EF351D188D4C009AE464 /* AnimationBarButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationBarButton.swift; sourceTree = "<group>"; };
+		1814EF381D188E3E009AE464 /* Rotatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rotatable.swift; sourceTree = "<group>"; };
 		1860C5CA1D0BBA58007ED07C /* Beer Thoughts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Beer Thoughts.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1860C5CD1D0BBA58007ED07C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1860C5D21D0BBA58007ED07C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -76,7 +79,6 @@
 		1860C5F01D0BCE4D007ED07C /* StoryBoardHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryBoardHelper.swift; sourceTree = "<group>"; };
 		1860C5F21D0BCF31007ED07C /* StoriesTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoriesTableVC.swift; sourceTree = "<group>"; };
 		1860C5F61D0BD5DD007ED07C /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		1860C5FC1D0BF912007ED07C /* TestVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestVC.swift; sourceTree = "<group>"; };
 		1860C5FE1D0C04FC007ED07C /* BeerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BeerCell.xib; sourceTree = "<group>"; };
 		1860C6021D0C0F6E007ED07C /* ExpandingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandingTableViewController.swift; sourceTree = "<group>"; };
 		1860C6061D0C0F6E007ED07C /* BasePageCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePageCollectionCell.swift; sourceTree = "<group>"; };
@@ -142,6 +144,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1814EF341D188D14009AE464 /* AnimatingButton */ = {
+			isa = PBXGroup;
+			children = (
+				1814EF351D188D4C009AE464 /* AnimationBarButton.swift */,
+			);
+			name = AnimatingButton;
+			sourceTree = "<group>";
+		};
+		1814EF371D188E2A009AE464 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				1814EF381D188E3E009AE464 /* Rotatable.swift */,
+			);
+			name = Animations;
+			sourceTree = "<group>";
+		};
 		1860C5C11D0BBA58007ED07C = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +209,8 @@
 		1860C5E11D0BC1F3007ED07C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1814EF371D188E2A009AE464 /* Animations */,
+				1814EF341D188D14009AE464 /* AnimatingButton */,
 				1860C6281D1052AE007ED07C /* Cells */,
 			);
 			name = Views;
@@ -201,7 +221,6 @@
 			children = (
 				1860C5ED1D0BCD28007ED07C /* BeersCollectionVC.swift */,
 				1860C5F21D0BCF31007ED07C /* StoriesTableVC.swift */,
-				1860C5FC1D0BF912007ED07C /* TestVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -543,6 +562,7 @@
 				1860C6BB1D12DB73007ED07C /* SDWebImageDownloaderOperation.m in Sources */,
 				1860C5F11D0BCE4D007ED07C /* StoryBoardHelper.swift in Sources */,
 				1860C61E1D0C0F6E007ED07C /* CornerAnimatable.swift in Sources */,
+				1814EF391D188E3E009AE464 /* Rotatable.swift in Sources */,
 				1860C6C31D12DB73007ED07C /* UIImageView+WebCache.m in Sources */,
 				1860C6191D0C0F6E007ED07C /* ExpandingTableViewController.swift in Sources */,
 				1860C5F31D0BCF31007ED07C /* StoriesTableVC.swift in Sources */,
@@ -554,6 +574,7 @@
 				1860C6BF1D12DB73007ED07C /* UIImage+GIF.m in Sources */,
 				1860C6C01D12DB73007ED07C /* UIImage+MultiFormat.m in Sources */,
 				1860C5EE1D0BCD28007ED07C /* BeersCollectionVC.swift in Sources */,
+				1814EF361D188D4C009AE464 /* AnimationBarButton.swift in Sources */,
 				1860C6C11D12DB73007ED07C /* UIImage+WebP.m in Sources */,
 				1860C6BD1D12DB73007ED07C /* SDWebImagePrefetcher.m in Sources */,
 				1860C5CE1D0BBA58007ED07C /* AppDelegate.swift in Sources */,
@@ -567,7 +588,6 @@
 				1860C6251D10485F007ED07C /* CircularLoaderView.swift in Sources */,
 				1860C6BA1D12DB73007ED07C /* SDWebImageDownloader.m in Sources */,
 				1860C6BE1D12DB73007ED07C /* UIButton+WebCache.m in Sources */,
-				1860C5FD1D0BF912007ED07C /* TestVC.swift in Sources */,
 				1860C6B61D12DB73007ED07C /* NSData+ImageContentType.m in Sources */,
 				1860C6231D0C0F6E007ED07C /* TransitionDriver.swift in Sources */,
 				1860C6221D0C0F6E007ED07C /* SubviewsForEach.swift in Sources */,

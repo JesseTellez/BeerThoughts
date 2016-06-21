@@ -14,13 +14,13 @@ class BeersCollectionVC: ExpandingViewController {
     private var cellsIsOpen = [Bool]()
     private var beerArray: NSArray = NSArray()
     private var beerDictionary: NSDictionary!
+    private var beersId = [String]()
+    private var otherDictionary: NSDictionary!
 }
 
 extension BeersCollectionVC {
     
     override func viewDidLoad() {
-        
-        //getDataFromServer()
         super.viewDidLoad()
         itemSize = CGSize(width: 256, height: 335)
         
@@ -32,33 +32,29 @@ extension BeersCollectionVC {
                 self.collectionView?.reloadData()
             })
             self.fillCellIsOpeenArry()
+            self.makeBeersIdArray()
         }
         
-//        downloadAllBeerData({
-//            dispatch_async(dispatch_get_main_queue(), {
-//                self.registerCell()
-//                self.collectionView?.reloadData()
-//            })
-//            self.fillCellIsOpeenArry()
-//        })
         registerCell()
         fillCellIsOpeenArry()
         addGestureToView(collectionView!)
-        //configureNavBar()
+        configureNavBar()
     
     }
     
-    func downloadAllBeerData (completed: DownloadComplete) {
+    func makeBeersIdArray() {
         
-        Alamofire.request(.GET, "\(URL_BASE)\(URL_BEERS)", parameters: nil).responseJSON(options: NSJSONReadingOptions.AllowFragments) { response in
-            
-            let result = response.result
-            
-            if let dict = result.value as? Dictionary<String, AnyObject> {
-                self.beerArray = dict["beers"] as! NSArray
-            }
-            completed()
+        for i in 0 ..< beerArray.count {
+            otherDictionary = beerArray.objectAtIndex(i) as! NSDictionary
+            let name = otherDictionary["id"] as? String
+            beersId.append(name!)
         }
+        
+//        for i in beerArray {
+//            otherDictionary = beerArray.objectAtIndex(i as! Int) as! NSDictionary
+//            let name = otherDictionary["id"] as? String
+//            beersId.append(name!)
+//        }
     }
 }
 
@@ -76,9 +72,13 @@ extension BeersCollectionVC {
         }
     }
     
-    private func getViewController() -> ExpandingTableViewController {
+    private func getViewController(index: Int) -> ExpandingTableViewController {
+        
+        //how am I going to pass an object doing this?
+        
         let storyboard = UIStoryboard(storyboard: .Main)
         let toViewController: StoriesTableVC = storyboard.instantiateViewController()
+        toViewController.beer = beersId[index]
         return toViewController
     }
     
@@ -105,7 +105,7 @@ extension BeersCollectionVC {
         let indexPath = NSIndexPath(forRow: currentIndex, inSection: 0)
         guard let cell  = collectionView?.cellForItemAtIndexPath(indexPath) as? BeerCell else { return }
         if cell.isOpened == true && sender.direction == .Up {
-            pushToViewController(getViewController())
+            pushToViewController(getViewController(indexPath.row))
         }
         
         let open = sender.direction == .Up ? true : false
@@ -120,11 +120,11 @@ extension BeersCollectionVC {
         super.collectionView(collectionView, willDisplayCell: cell, forItemAtIndexPath: indexPath)
         guard let cell = cell as? BeerCell else { return }
         
-        if beerArray.count < cellsIsOpen.count {
-            let index = indexPath.row % beerArray.count
-            cell.cellIsOpen(cellsIsOpen[index], animated: false)
-        }
-        
+//        if beerArray.count < cellsIsOpen.count {
+//            
+//        }
+        let index = indexPath.row % beerArray.count
+        cell.cellIsOpen(cellsIsOpen[index], animated: false)
     }
     
     
@@ -134,8 +134,17 @@ extension BeersCollectionVC {
         
         if cell.isOpened == false {
             cell.cellIsOpen(true)
+            //may need to change code below
+            cell.arrowImage.hidden = true
         } else {
-            pushToViewController(getViewController())
+            cell.arrowImage.hidden = true
+            
+            print("THIS IS THE BEER TO BE PASSED: \(beersId[indexPath.row])")
+            
+            pushToViewController(getViewController(indexPath.row))
+            if let rightButton = navigationItem.rightBarButtonItem as? AnimationBarButton {
+                rightButton.animationSelected(true)
+            }
         }
     }
 }
@@ -153,6 +162,7 @@ extension BeersCollectionVC {
             beerDictionary = self.beerArray.objectAtIndex(indexPath.row) as! NSDictionary
             let newBeer = Beer(withDictionary: beerDictionary)
             cell.configureCell(newBeer)
+            
             return cell
         } else {
             return BeerCell()

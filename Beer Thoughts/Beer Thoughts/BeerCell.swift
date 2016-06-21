@@ -12,6 +12,9 @@ import Alamofire
 
 class BeerCell: BasePageCollectionCell, SDWebImageManagerDelegate {
     
+    @IBOutlet weak var beerImageView: UIImageView!
+    
+    @IBOutlet weak var arrowImage: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var alcPercentLabel: UILabel!
     @IBOutlet weak var beerDescription: UITextView!
@@ -22,7 +25,6 @@ class BeerCell: BasePageCollectionCell, SDWebImageManagerDelegate {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
         SDWebImageManager.sharedManager().delegate = self
         titleLabel.layer.shadowRadius = 2
         titleLabel.layer.shadowOffset = CGSize(width: 0, height: 3)
@@ -41,9 +43,9 @@ class BeerCell: BasePageCollectionCell, SDWebImageManagerDelegate {
                 
             let url = NSURL(string: beer.beerImage!)
             
-            SDWebImageManager.sharedManager().downloadImageWithURL(url, options: SDWebImageOptions.CacheMemoryOnly, progress: { [weak self] (recievedSize, expectedSize) in
+            SDWebImageManager.sharedManager().downloadImageWithURL(url, options: SDWebImageOptions.CacheMemoryOnly, progress: { (recievedSize, expectedSize) in
                 
-                self!.customImageView.progressIndicatorView.progress = CGFloat(recievedSize)/CGFloat(expectedSize)
+//                self!.customImageView.progressIndicatorView.progress = CGFloat(recievedSize)/CGFloat(expectedSize)
                 
                 }, completed: { (image, error, cacheType, _, _) in
                     
@@ -51,8 +53,8 @@ class BeerCell: BasePageCollectionCell, SDWebImageManagerDelegate {
         
                         dispatch_async(dispatch_get_main_queue(), { [weak self]
                             () -> Void in
-                            self!.customImageView.image = image
-                            self!.customImageView.progressIndicatorView.reveal()
+                            self!.beerImageView.image = image
+                            //self!.customImageView.progressIndicatorView.reveal()
                         })
                     }
             })

@@ -11,7 +11,6 @@ import UIKit
 extension UIImage {
     
     class func resizeImage(image: UIImage) -> UIImage{
-        
         var actualHeight = image.size.height
         var actualWidth = image.size.width
         let maxHeight: CGFloat = 249.0
@@ -45,6 +44,5 @@ extension UIImage {
         UIGraphicsEndImageContext()
         
         return UIImage(data: newData!)!
-        
     }
 }

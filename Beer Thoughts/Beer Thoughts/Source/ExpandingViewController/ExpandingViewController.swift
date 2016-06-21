@@ -52,11 +52,15 @@ public extension ExpandingViewController {
    
    - parameter viewController: The table view controller to push onto the stack. 
    */
-  func pushToViewController(viewController: ExpandingTableViewController) {
+    func pushToViewController(viewController: ExpandingTableViewController) {
     guard let collectionView = self.collectionView,
     let navigationController = self.navigationController else {
       return
     }
+    
+//    if let controller = viewController as? StoriesTableVC {
+//        controller.beer = name
+//    }
     
     viewController.transitionDriver = transitionDriver
     let insets = viewController.automaticallyAdjustsScrollViewInsets

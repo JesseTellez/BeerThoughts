@@ -19,6 +19,5 @@ class CustomImageView: UIImageView {
         addSubview(self.progressIndicatorView)
         progressIndicatorView.frame = bounds
         progressIndicatorView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
-        
     }
 }
